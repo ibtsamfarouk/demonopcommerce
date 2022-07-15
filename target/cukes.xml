@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="21" time="384.342">
+<testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="32.543">
+<system-out><![CDATA[Given user goes to register page............................................passed
+When user selects the gender type...........................................passed
+And user enters first name "automation" and last name "tester"..............passed
+And user enters date of birth...............................................passed
+And user enters email "test@example.com" field..............................passed
+And user fills Password fields "P@ssw0rd"...................................passed
+And user clicks on register button..........................................passed
+Then A success message will be displayed....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="14.312">
+<system-out><![CDATA[Given user goes to login page...............................................passed
+When user logs in with "valid" "test@example.com" and "P@ssw0rd"............passed
+And user presses on the login button........................................passed
+Then user logs in to the system successfully................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user can't login with invalid email and password" time="12.524">
+<system-out><![CDATA[Given user goes to login page...............................................passed
+When user logs in with "invalid" "test@example.com" and "P@ssw0rd"..........passed
+And user presses on the login button........................................passed
+Then user can not login to the system.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_currencies | users can change the system currency" name="users can change the system currency successfully" time="13.504">
+<system-out><![CDATA[Given user selects Euro currency from the dropdown list on the top left of home page.passed
+Then Euro Symbol € is shown on the 4 displayed products the in Home page....passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search using product name" time="18.995">
+<system-out><![CDATA[When user types "book" in the search field and clicks search button.........passed
+Then The search result for search with "book" will be displayed.............passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search using product name 2" time="14.462">
+<system-out><![CDATA[When user types "laptop" in the search field and clicks search button.......passed
+Then The search result for search with "laptop" will be displayed...........passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search using product name 3" time="27.089">
+<system-out><![CDATA[When user types "nike" in the search field and clicks search button.........passed
+Then The search result for search with "nike" will be displayed.............passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search for product using sku" time="22.762">
+<system-out><![CDATA[When user types "SCI_FAITH" in the search field and clicks search button....passed
+Then The search result for searching with "SCI_FAITH" will be displayed.....passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search for product using sku 2" time="13.599">
+<system-out><![CDATA[When user types "APPLE_CAM" in the search field and clicks search button....passed
+Then The search result for searching with "APPLE_CAM" will be displayed.....passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search for product using sku 3" time="14.193">
+<system-out><![CDATA[When user types "SF_PRO_11" in the search field and clicks search button....passed
+Then The search result for searching with "SF_PRO_11" will be displayed.....passed
+]]></system-out>
+</testcase>
+<testcase classname="F05_SelectDifferentCategories |user can select different Categories" name="user can select different Categories" time="11.338">
+<system-out><![CDATA[Given user hovers on "Computers" on the top menu,The related sub menu will be opened and one of it's items will be selected.passed
+]]></system-out>
+</testcase>
+<testcase classname="F05_SelectDifferentCategories |user can select different Categories" name="user can select different Categories 2" time="15.156">
+<system-out><![CDATA[Given user hovers on "Electronics" on the top menu,The related sub menu will be opened and one of it's items will be selected.passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_AddToWishList |user can add different products to Wishlist" name="1-user can add different products to Wishlist" time="15.508">
+<system-out><![CDATA[Given user clicks on add to wish list button of HTC One M8 Android L 5.0 Lollipop from the home screen.passed
+Then A message that the product was added to the wish list successfully will be displayed.passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_AddToWishList |user can add different products to Wishlist" name="2-user can add different products to Wishlist" time="22.492">
+<system-out><![CDATA[Given user searches for a "HTC One M8 Android L 5.0 Lollipop" from the home screen.passed
+Then The search result for search will be displayed.........................passed
+And The user clicks on the first item to be in the product details page.....passed
+And The user clicks on add to wishList button...............................passed
+Then The name of the "HTC One M8 Android L 5.0 Lollipop" will be added to the wishlist with a quantity more than zero.passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_AddToCompare |user can add two products to compare them" name="user can add two products to compare them" time="27.471">
+<system-out><![CDATA[When user types "Apple MacBook Pro 13-inch" in the search field and clicks search button.passed
+Then The search result appears and the user selects one of the search results.passed
+And The user clicks on addToCompare button..................................passed
+Then user types "Build your own computer" in the search field and clicks search button.passed
+Then The search result appears and the user selects one of the search results.passed
+And The user clicks on addToCompare button..................................passed
+Then The user navigates to the compare page to compare between the two added products.passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_Slider |Navigation after clicking on Slider images." name="The page should be navigated after clicking on the first image in the slider." time="10.349">
+<failure message="Wrong direction! Bug Dedected! expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given The user clicks on the first image on the slider......................passed
+Then The page should be navigated to the expected URL "https://demo.nopcommerce.com/nokia-lumia-1020".failed
+
+StackTrace:
+java.lang.AssertionError: Wrong direction! Bug Dedected! expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefs.D08_SliderNavigation.checkNavigation(D08_SliderNavigation.java:16)
+	at ✽.The page should be navigated to the expected URL "https://demo.nopcommerce.com/nokia-lumia-1020"(file:///C:/Users/Ibtsam%20Farouk/IdeaProjects/demonopcommerce/src/main/resources/features/F08_Slider.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="F07_Slider |Navigation after clicking on Slider images." name="The page should be navigated after clicking on the second image in the slider." time="16.902">
+<failure message="Wrong direction! Bug Dedected! expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given The user clicks on the second image on the slider.....................passed
+Then The page should be navigated to the expected URL "https://demo.nopcommerce.com/iphone-6".failed
+
+StackTrace:
+java.lang.AssertionError: Wrong direction! Bug Dedected! expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefs.D08_SliderNavigation.checkNavigation(D08_SliderNavigation.java:16)
+	at ✽.The page should be navigated to the expected URL "https://demo.nopcommerce.com/iphone-6"(file:///C:/Users/Ibtsam%20Farouk/IdeaProjects/demonopcommerce/src/main/resources/features/F08_Slider.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="F09_followUs | users could open followUs links" name="user opens facebook link" time="15.108">
+<system-out><![CDATA[Given user opens facebook link..............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in a new tab..........passed
+]]></system-out>
+</testcase>
+<testcase classname="F09_followUs | users could open followUs links" name="user opens twitter link" time="20.457">
+<system-out><![CDATA[Given user opens twitter link...............................................passed
+Then "https://twitter.com/nopCommerce" is opened in a new tab...............passed
+]]></system-out>
+</testcase>
+<testcase classname="F09_followUs | users could open followUs links" name="user opens rss link" time="13.318">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[Given user opens rss link...................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in a new tab.failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.stepDefs.D09_followUsStepDef.checkTaps(D09_followUsStepDef.java:32)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in a new tab(file:///C:/Users/Ibtsam%20Farouk/IdeaProjects/demonopcommerce/src/main/resources/features/F09_followUs.feature:14)
+]]></failure>
+</testcase>
+<testcase classname="F09_followUs | users could open followUs links" name="user opens youtube link" time="30.34">
+<system-out><![CDATA[Given user opens youtube link...............................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in a new tab......passed
+]]></system-out>
+</testcase>
+</testsuite>
