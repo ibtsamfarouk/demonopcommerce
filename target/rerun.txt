@@ -1,0 +1,4 @@
+file:src/main/resources/features/F09_followUs.feature:12
+file:src/main/resources/features/F07_AddtoCompare.feature:14
+file:src/main/resources/features/F04_Search.feature:23:24
+file:src/main/resources/features/F08_Slider.feature:4:9

@@ -92,4 +92,9 @@ public class P00_Home {
         return  Hooks.driver.findElement(By.cssSelector("span.wishlist-label"));
     }
 
+    public WebElement electronicsLink()
+    {
+        return  Hooks.driver.findElement(By.cssSelector("a[title=\"Show products in category Electronics\"]"));
+    }
+
 }

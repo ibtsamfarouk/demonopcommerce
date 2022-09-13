@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="6" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="22" time="194.276">
+<testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="14.033">
+<system-out><![CDATA[Given user goes to register page............................................passed
+When user selects the gender type...........................................passed
+And user enters first name "automation" and last name "tester"..............passed
+And user enters date of birth...............................................passed
+And user enters email "test@example.com" field..............................passed
+And user fills Password fields "P@ssw0rd"...................................passed
+And user clicks on register button..........................................passed
+Then A success message will be displayed....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="8.94">
+<system-out><![CDATA[Given user goes to login page...............................................passed
+When user logs in with "valid" "test@example.com" and "P@ssw0rd"............passed
+And user presses on the login button........................................passed
+Then user logs in to the system successfully................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user can't login with invalid email and password" time="6.157">
+<system-out><![CDATA[Given user goes to login page...............................................passed
+When user logs in with "invalid" "test@example.com" and "P@ssw0rd"..........passed
+And user presses on the login button........................................passed
+Then user can not login to the system.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_currencies | users can change the system currency" name="users can change the system currency successfully" time="6.24">
+<system-out><![CDATA[Given user selects Euro currency from the dropdown list on the top left of home page.passed
+Then Euro Symbol € is shown on the 4 displayed products the in Home page....passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search using product name" time="6.22">
+<system-out><![CDATA[When user types "book" in the search field and clicks search button.........passed
+Then The search result for search with "book" will be displayed.............passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search using product name 2" time="5.192">
+<system-out><![CDATA[When user types "laptop" in the search field and clicks search button.......passed
+Then The search result for search with "laptop" will be displayed...........passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search using product name 3" time="6.126">
+<system-out><![CDATA[When user types "nike" in the search field and clicks search button.........passed
+Then The search result for search with "nike" will be displayed.............passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search for product using sku" time="17.418">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.sku&quot;}&#10;  (Session info: chrome=105.0.5195.102)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'DESKTOP-LFNLK2F', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [8a8a0fd021053e1288c019051aaddb43, findElement {using=class name, value=sku}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Ibtsam\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54662}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54662/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 8a8a0fd021053e1288c019051aaddb43" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user types "SCI_FAITH" in the search field and clicks search button....passed
+Then The search result for searching with "SCI_FAITH" will be displayed.....failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".sku"}
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-LFNLK2F', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8a8a0fd021053e1288c019051aaddb43, findElement {using=class name, value=sku}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Ibtsam\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54662}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54662/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8a8a0fd021053e1288c019051aaddb43
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example.pages.P05_ProductDetails.skuLbl(P05_ProductDetails.java:11)
+	at org.example.stepDefs.D04_searchStepDef.checkResultAfterSearchingWithSku(D04_searchStepDef.java:50)
+	at ✽.The search result for searching with "SCI_FAITH" will be displayed(file:///C:/Users/Ibtsam/OneDrive/Documents/GitHub/demonopcommerce/src/main/resources/features/F04_Search.feature:19)
+]]></failure>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search for product using sku 2" time="16.223">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.sku&quot;}&#10;  (Session info: chrome=105.0.5195.102)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'DESKTOP-LFNLK2F', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [af23c6a1dd8086196e763f9e421c3bb5, findElement {using=class name, value=sku}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Ibtsam\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54697}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54697/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: af23c6a1dd8086196e763f9e421c3bb5" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user types "APPLE_CAM" in the search field and clicks search button....passed
+Then The search result for searching with "APPLE_CAM" will be displayed.....failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".sku"}
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-LFNLK2F', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [af23c6a1dd8086196e763f9e421c3bb5, findElement {using=class name, value=sku}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Ibtsam\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54697}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54697/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: af23c6a1dd8086196e763f9e421c3bb5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example.pages.P05_ProductDetails.skuLbl(P05_ProductDetails.java:11)
+	at org.example.stepDefs.D04_searchStepDef.checkResultAfterSearchingWithSku(D04_searchStepDef.java:50)
+	at ✽.The search result for searching with "APPLE_CAM" will be displayed(file:///C:/Users/Ibtsam/OneDrive/Documents/GitHub/demonopcommerce/src/main/resources/features/F04_Search.feature:19)
+]]></failure>
+</testcase>
+<testcase classname="F04_search |user could search using product name and sku" name="user could search for product using sku 3" time="7.925">
+<system-out><![CDATA[When user types "SF_PRO_11" in the search field and clicks search button....passed
+Then The search result for searching with "SF_PRO_11" will be displayed.....passed
+]]></system-out>
+</testcase>
+<testcase classname="F05_SelectDifferentCategories |user can select different Categories" name="user can select different Categories" time="5.785">
+<system-out><![CDATA[Given user hovers on "Computers" on the top menu,The related sub menu will be opened and one of it's items will be selected.passed
+]]></system-out>
+</testcase>
+<testcase classname="F05_SelectDifferentCategories |user can select different Categories" name="user can select different Categories 2" time="6.149">
+<system-out><![CDATA[Given user hovers on "Electronics" on the top menu,The related sub menu will be opened and one of it's items will be selected.passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_AddToWishList |user can add different products to Wishlist" name="1-user can add different products to Wishlist" time="5.794">
+<system-out><![CDATA[Given user clicks on add to wish list button of HTC One M8 Android L 5.0 Lollipop from the home screen.passed
+Then A message that the product was added to the wish list successfully will be displayed.passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_AddToWishList |user can add different products to Wishlist" name="2-user can add different products to Wishlist" time="14.971">
+<system-out><![CDATA[Given user searches for a "HTC One M8 Android L 5.0 Lollipop" from the home screen.passed
+Then The search result for search will be displayed.........................passed
+And The user clicks on the first item to be in the product details page.....passed
+And The user clicks on add to wishList button...............................passed
+Then The name of the "HTC One M8 Android L 5.0 Lollipop" will be added to the wishlist with a quantity more than zero.passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_AddToCompare |user can add two products to compare them" name="user can add two products to compare them" time="15.929">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div.compare-products&quot;}&#10;  (Session info: chrome=105.0.5195.102)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'DESKTOP-LFNLK2F', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [868d75275824473e764cf2c9a6e97a70, findElement {using=css selector, value=div.compare-products}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Ibtsam\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54893}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54893/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 868d75275824473e764cf2c9a6e97a70" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user types "Apple MacBook Pro 13-inch" in the search field and clicks search button.passed
+Then The search result appears and the user selects one of the search results.passed
+And The user clicks on addToCompare button..................................failed
+Then user types "Build your own computer" in the search field and clicks search button.skipped
+Then The search result appears and the user selects one of the search results.skipped
+And The user clicks on addToCompare button..................................skipped
+Then The user navigates to the compare page to compare between the two added products.skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div.compare-products"}
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-LFNLK2F', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [868d75275824473e764cf2c9a6e97a70, findElement {using=css selector, value=div.compare-products}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Ibtsam\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54893}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54893/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 868d75275824473e764cf2c9a6e97a70
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example.pages.P05_ProductDetails.addToCompareBtn(P05_ProductDetails.java:19)
+	at org.example.stepDefs.D07_AddToCompare.addToCompareList(D07_AddToCompare.java:24)
+	at ✽.The user clicks on addToCompare button(file:///C:/Users/Ibtsam/OneDrive/Documents/GitHub/demonopcommerce/src/main/resources/features/F07_AddtoCompare.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="F07_Slider |Navigation after clicking on Slider images." name="The page should be navigated after clicking on the first image in the slider." time="4.566">
+<failure message="Wrong direction! Bug Dedected! expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given The user clicks on the first image on the slider......................passed
+Then The page should be navigated to the expected URL "https://demo.nopcommerce.com/nokia-lumia-1020".failed
+
+StackTrace:
+java.lang.AssertionError: Wrong direction! Bug Dedected! expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefs.D08_SliderNavigation.checkNavigation(D08_SliderNavigation.java:16)
+	at ✽.The page should be navigated to the expected URL "https://demo.nopcommerce.com/nokia-lumia-1020"(file:///C:/Users/Ibtsam/OneDrive/Documents/GitHub/demonopcommerce/src/main/resources/features/F08_Slider.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="F07_Slider |Navigation after clicking on Slider images." name="The page should be navigated after clicking on the second image in the slider." time="7.716">
+<failure message="Wrong direction! Bug Dedected! expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given The user clicks on the second image on the slider.....................passed
+Then The page should be navigated to the expected URL "https://demo.nopcommerce.com/iphone-6".failed
+
+StackTrace:
+java.lang.AssertionError: Wrong direction! Bug Dedected! expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefs.D08_SliderNavigation.checkNavigation(D08_SliderNavigation.java:16)
+	at ✽.The page should be navigated to the expected URL "https://demo.nopcommerce.com/iphone-6"(file:///C:/Users/Ibtsam/OneDrive/Documents/GitHub/demonopcommerce/src/main/resources/features/F08_Slider.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="F09_followUs | users could open followUs links" name="user opens facebook link" time="7.725">
+<system-out><![CDATA[Given user opens facebook link..............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in a new tab..........passed
+]]></system-out>
+</testcase>
+<testcase classname="F09_followUs | users could open followUs links" name="user opens twitter link" time="8.128">
+<system-out><![CDATA[Given user opens twitter link...............................................passed
+Then "https://twitter.com/nopCommerce" is opened in a new tab...............passed
+]]></system-out>
+</testcase>
+<testcase classname="F09_followUs | users could open followUs links" name="user opens rss link" time="7.554">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[Given user opens rss link...................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in a new tab.failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at org.example.stepDefs.D09_followUsStepDef.checkTaps(D09_followUsStepDef.java:32)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in a new tab(file:///C:/Users/Ibtsam/OneDrive/Documents/GitHub/demonopcommerce/src/main/resources/features/F09_followUs.feature:14)
+]]></failure>
+</testcase>
+<testcase classname="F09_followUs | users could open followUs links" name="user opens youtube link" time="8.69">
+<system-out><![CDATA[Given user opens youtube link...............................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in a new tab......passed
+]]></system-out>
+</testcase>
+<testcase classname="F10_Test | user can click on the electronics link" name="user can click on the electronics link successfully" time="6.415">
+<system-out><![CDATA[Given user is in the home page and clicks on the electronics link...........passed
+Then the electronics will be opened.........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
